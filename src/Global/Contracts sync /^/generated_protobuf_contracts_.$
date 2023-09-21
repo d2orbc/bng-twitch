@@ -1,0 +1,32 @@
+var map = {
+	"./generated_protobuf_contracts_dev": 124,
+	"./generated_protobuf_contracts_dev.js": 124,
+	"./generated_protobuf_contracts_local": 125,
+	"./generated_protobuf_contracts_local.js": 125,
+	"./generated_protobuf_contracts_next": 126,
+	"./generated_protobuf_contracts_next.js": 126,
+	"./generated_protobuf_contracts_prod": 127,
+	"./generated_protobuf_contracts_prod.js": 127,
+	"./generated_protobuf_contracts_stage": 128,
+	"./generated_protobuf_contracts_stage.js": 128
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 123;
